@@ -3,14 +3,11 @@ import {
   Form,
   Input,
   Button,
-  Select,
   Row,
   Col,
 } from "antd";
 import { useHistory } from "react-router-dom";
 import api from "./api";
-
-const { Option } = Select;
 
 const layout = {
   labelCol: { span: 8 },

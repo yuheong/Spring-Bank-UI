@@ -15,12 +15,6 @@ export default function Home(props) {
 
   return (
     <>
-      {/* <h1>All Customer Listings</h1> */}
-      {/* <ul>
-        {customers.map((customer, id) => (
-          <li key={id}>{customer.name}</li>
-        ))}
-      </ul> */}
       <div
         style={{
           display: "flex",

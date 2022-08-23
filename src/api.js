@@ -62,19 +62,6 @@ const getLoans = (customer_id) => {
   });
 };
 
-// const updateJob = (job_id, body) => {
-//   return instance
-//     .put(`jobs/${job_id}`, body, {
-//       headers: {
-//         // Overwrite Axios's automatically set Content-Type
-//         "Content-Type": "application/json",
-//       },
-//     })
-//     .then((res) => {
-//       return res.data;
-//     });
-// };
-
 export default {
   listCustomers,
   getCustomer,
