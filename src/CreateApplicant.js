@@ -6,7 +6,6 @@ import {
   Select,
   Row,
   Col,
-  InputNumber,
 } from "antd";
 import { useHistory } from "react-router-dom";
 import api from "./api";
@@ -41,15 +40,6 @@ export default function CreateApplicant(props) {
     form.resetFields();
   };
 
-  const onFill = () => {
-    form.setFieldsValue({
-      name: "Event DJ at Sentosa Beach Club",
-      category: "Deejay",
-      pay: 3500,
-      description: "Blah blah blah",
-    });
-  };
-
   return (
     <Row
       type="flex"
@@ -64,29 +54,6 @@ export default function CreateApplicant(props) {
           <Form.Item name="name" label="Name" rules={[{ required: true }]}>
             <Input />
           </Form.Item>
-          {/* <Form.Item
-            name="category"
-            label="Category"
-            rules={[{ required: true }]}
-          > */}
-          {/* <Select placeholder="Select an option" allowClear>
-              <Option value="Waiter">Waiter</Option>
-              <Option value="Deejay">Deejay</Option>
-              <Option value="Driver">Driver</Option>
-              <Option value="Bartender">Bartender</Option>
-              <Option value="Chef">Chef</Option>
-            </Select> */}
-          {/* </Form.Item> */}
-          {/* <Form.Item name="pay" label="Salary">
-            <InputNumber
-              defaultValue={1000}
-              formatter={(value) =>
-                `$ ${value}`.replace(/\B(?=(\d{3})+(?!\d))/g, ",")
-              }
-              parser={(value) => value.replace(/\$\s?|(,*)/g, "")}
-              onChange={onChange}
-            />
-          </Form.Item> */}
           <Form.Item {...tailLayout}>
             <Button type="primary" htmlType="submit">
               Submit
@@ -94,9 +61,6 @@ export default function CreateApplicant(props) {
             <Button htmlType="button" onClick={onReset}>
               Reset
             </Button>
-            {/* <Button type="link" htmlType="button" onClick={onFill}>
-              Fill form
-            </Button> */}
           </Form.Item>
         </Form>
       </Col>
