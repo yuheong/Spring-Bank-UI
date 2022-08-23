@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { Link, useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
 import api from "./api";
 import "./ManageApplicants.css";
 
 export default function ManageApplicants(props) {
   const [customers, setCustomers] = useState([]);
-  let history = useHistory();
 
   useEffect(() => {
     api.listCustomers().then((res) => {

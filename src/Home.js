@@ -1,18 +1,8 @@
-import React, { useState, useEffect } from "react";
-import { Link, useHistory } from "react-router-dom";
+import React from "react";
+import { Link } from "react-router-dom";
 import "./App.css";
-import api from "./api";
 
 export default function Home(props) {
-  const [customers, setCustomers] = useState([]);
-  let history = useHistory();
-
-  useEffect(() => {
-    api.listCustomers().then((res) => {
-      setCustomers(res);
-    });
-  }, []);
-
   return (
     <>
       <div

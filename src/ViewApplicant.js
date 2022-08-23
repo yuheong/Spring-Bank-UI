@@ -7,11 +7,10 @@ import {
   Row,
   Col,
   Descriptions,
-  Input,
   InputNumber,
   DatePicker,
 } from "antd";
-import { Link, useParams, useHistory } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import api from "./api";
 import "./ViewApplicant.css";
 
@@ -28,7 +27,6 @@ const tailLayout = {
 export default function ViewApplicant(props) {
   const [form] = Form.useForm();
   let { user_id } = useParams();
-  let history = useHistory();
   let [applicant, setApplicant] = useState({});
   let [creditFacility, setCreditFacility] = useState({});
   let [loans, setLoans] = useState([]);
@@ -46,7 +44,7 @@ export default function ViewApplicant(props) {
         });
       }
     });
-  }, []);
+  }, [user_id]);
 
   const handleOpenFacility = () => {
     api.openCreditFacility(user_id).then((res) => {
